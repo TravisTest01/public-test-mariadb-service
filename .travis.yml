@@ -1,0 +1,59 @@
+os: linux
+jobs:
+  include:
+    - dist: jammy
+      virt: vm
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
+    - dist: jammy
+      virt: lxd
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
+    - dist: bionic
+      virt: vm
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
+    - dist: bionic
+      virt: lxd
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
+    - dist: focal
+      virt: vm
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
+    - dist: focal
+      virt: lxd
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
+    - dist: xenial
+      virt: vm
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
+    - dist: xenial
+      virt: lxd
+      arch: amd64
+      addons:
+        mariadb: '10.9'
+      script:
+        - ruby hello_world.rb
